@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+<p>Hello, <span th:text="${appointment.customer.firstName}"></span></p>
+<p>This is your finished appointment summary:</p>
+<p>Date: <span th:text="${#temporals.format(appointment.start, 'dd-MM-yyyy HH:mm')}"></span></p>
+<p>Office: <span th:text="${appointment.provider.firstName}"></span></p>
+<p>Request: <span th:text="${appointment.work.name}"></span></p>
+<p>Duration: <span th:text="${appointment.work.duration}"></span> mins</p>
+<p>Price: <span th:text="${appointment.work.price}"></span> php</p>
+<p>Please Send us a feedback <a th:href="'https://docs.google.com/forms/d/e/1FAIpQLSdMTA1f9v9_6ZZZXaa2O2JPm4P-bOFWjxAWOIipEsJMV9hckw/viewform?fbclid=IwAR1eHBjHnpvzHyk8KtZEX2w8Z9vNDbL7bvbPCIMDbwh9MvYd7mM2SlX0u_0'">here</a></p>
+
+</body>
+
+</html>
